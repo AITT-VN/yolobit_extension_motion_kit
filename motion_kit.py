@@ -2,7 +2,7 @@ from micropython import const
 from machine import SoftI2C, Pin
 from yolobit import *
 
-robocon_servos_pos = {}
+motion_servos_pos = {}
 
 MK_DEFAULT_I2C_ADDRESS = 0x55
 
