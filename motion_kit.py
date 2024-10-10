@@ -4,7 +4,7 @@ from yolobit import *
 
 motion_servos_pos = {}
 
-MK_DEFAULT_I2C_ADDRESS = 0x55
+MK_DEFAULT_I2C_ADDRESS = 0x35
 
 MK_REG_MOTOR_INDEX = const(0) # set motor speed - motor index
 MK_REG_MOTOR_SPEED = const(2) # set motor speed - speed
@@ -172,24 +172,3 @@ class MotionKit():
                 result_array[i] = raw
 
 mk = MotionKit()
-'''
-# unit test code
-
-while True:
-  mk.set_motors(MOTOR_ALL, 100)
-  for i in range(4):
-    mk.set_servo(i, 0)
-  time.sleep(2)
-  mk.brake(MOTOR_ALL)
-  time.sleep(1)
-  mk.set_motors(MOTOR_ALL, 0)
-  time.sleep(2)
-  mk.set_motors(MOTOR_ALL, -100)
-  for i in range(4):
-    mk.set_servo(i, 180)
-  time.sleep(2)
-  mk.brake(MOTOR_ALL)
-  time.sleep(1)
-  mk.set_motors(MOTOR_ALL, 0)
-  time.sleep(2)
- '''
